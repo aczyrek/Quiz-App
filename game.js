@@ -1,6 +1,7 @@
 const question = document.getElementById("question");
 const choices = Array.from(document.getElementsByClassName("choice-text"));
-const questionCounterText = document.getElementById("questionCounter");
+const progressText = document.getElementById("progressText");
+const progressBarFull = document.getElementById("progressBarFull");
 const scoreText = document.getElementById("score");
 
 let currentQuestion = {};
@@ -16,16 +17,16 @@ let questions = [
     choice2: "Michael Jordan",
     choice3: "Kobe Bryant",
     choice4: "Stephen Curry",
-    answer: 1
+    answer: 2
     
   },
   {
     question:
       "What is the most famous food in Italy?",
-    choice1: "Pizza",
+    choice1: "Croissant",
     choice2: "Pasta",
     choice3: "Lasagna",
-    choice4: "Spaghetti",
+    choice4: "Risotto",
     answer: 2
     
   },
@@ -57,7 +58,11 @@ getNewQuestion = () => {
     return window.location.assign("/end.html");
   }
   questionCounter++;
-  questionCounterText.innerText = `${questionCounter}/${MAX_QUESTIONS}`;
+  progressText.innerText = `Question${questionCounter}/${MAX_QUESTIONS}`;
+
+  //Update the progress bar
+  progressBarFull.style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`;
+
 
   const questionIndex = Math.floor(Math.random() * availableQuesions.length);
   currentQuestion = availableQuesions[questionIndex];

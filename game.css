@@ -60,3 +60,15 @@
    text-align: center;
 }
 
+#progressBar{
+    width: 20rem;
+    height: 4rem;
+    border: 0.3rem solid rgb(86, 186, 235,0.5);
+    margin-top: 1rem;
+}
+
+#progressBarFull{
+    height: 3.4rem;
+    background-color: #56a5eb;
+    width: 0%;
+    }
