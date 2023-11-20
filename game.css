@@ -1,0 +1,38 @@
+.choice-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 0 1rem;
+    border: 0.1rem solid rgb(86, 186, 235,0.5);
+}
+
+.choice-container:hover{
+    transform: translateY(-0.2rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.choice-prefix{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #56a5eb;
+    text-transform: uppercase;
+}
+
+.choice-text{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+}
+
+.correct{
+    background-color: #56eb5b;
+}
+
+.incorrect{
+    background-color: #eb5656;
+}
