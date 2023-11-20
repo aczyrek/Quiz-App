@@ -29,10 +29,34 @@
     text-align: center;
 }
 
-.correct{
-    background-color: #56eb5b;
+.correct {
+    background-color: #28a745;
+  }
+  
+  .incorrect {
+    background-color: #dc3545;
+  }
+
+/* HUD */
+/* Path: game.css */
+#hud{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10%;
+    width: 100%;
+    padding: 0 1rem;
+    border: 0.1rem solid rgb(86, 186, 235,0.5);
+}
+.hud-prefix{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #56a5eb;
+    text-transform: uppercase;
+    text-align: center;
 }
 
-.incorrect{
-    background-color: #eb5656;
+.hud-main-text{
+   text-align: center;
 }
+

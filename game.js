@@ -1,5 +1,7 @@
 const question = document.getElementById("question");
 const choices = Array.from(document.getElementsByClassName("choice-text"));
+const questionCounterText = document.getElementById("questionCounter");
+const scoreText = document.getElementById("score");
 
 let currentQuestion = {};
 let acceptingAnswers = false;
@@ -9,28 +11,31 @@ let availableQuestions = [];
 
 let questions = [
   {
-    question: "What is 2 * 2?",
-    choice1: "2",
-    choice2: "4",
-    choice3: "21",
-    choice4: "6",
+    question: "Who is the best basketball player?",
+    choice1: "Lebron James",
+    choice2: "Michael Jordan",
+    choice3: "Kobe Bryant",
+    choice4: "Kevin Durant",
+    answer: 1,
+    
+  },
+  {
+    question: "What is the most popular food in Italy?",
+    choice1: "Pizza",
+    choice2: "Pasta",
+    choice3: "Spaghetti",
+    choice4: "Lasagna",
     answer: 2,
+    
   },
   {
-    question: "What is 2 / 2?",
-    choice1: "2",
-    choice2: "4",
-    choice3: "21",
-    choice4: "1",
-    answer: 4,
-  },
-  {
-    question: "What is 2 - 2?",
-    choice1: "2",
-    choice2: "4",
-    choice3: "21",
-    choice4: "0",
-    answer: 4,
+    question: "What is the biggest country in Europe?",
+    choice1: "Germany",
+    choice2: "Russia",
+    choice3: "France",
+    choice4: "Italy",
+    answer: 2,
+    
   },
 ];
 
@@ -52,6 +57,7 @@ getNewQuestion = () => {
   }
 
   questionCounter++;
+  questionCounterText.innerText = `${questionCounter}/${MAX_QUESTIONS}`;
   const questionIndex = Math.floor(Math.random() * availableQuestions.length);
   currentQuestion = availableQuestions[questionIndex];
   question.innerText = currentQuestion.question;
@@ -73,8 +79,11 @@ choices.forEach((choice) => {
     const selectedChoice = e.target;
     const selectedAnswer = selectedChoice.dataset["number"];
 
-    classToApply =
+    const classToApply =
       selectedAnswer === currentQuestion.answer ? "correct" : "incorrect";
+    if (classToApply === "correct") {
+      incrementScore(CORRECT_BONUS);
+    }
 
     selectedChoice.parentElement.classList.add(classToApply);
     setTimeout(() => {
@@ -85,5 +94,10 @@ choices.forEach((choice) => {
     getNewQuestion();
   });
 });
+
+incrementScore = (num) => {
+  score += num;
+  scoreText.innerText = score;
+};
 
 startGame();
