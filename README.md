@@ -1,1 +1,1 @@
-# Quiz_App
+Welcome to Quiz App Game, the ultimate trivia game that will test your knowledge, challenge your wits, and entertain you for hours! Get ready to embark on a journey of fun and discovery as you tackle a wide range of intriguing questions across various categories.
