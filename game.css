@@ -1,4 +1,4 @@
-.choice-container{
+.choice-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -6,23 +6,24 @@
     height: 100%;
     width: 100%;
     padding: 0 1rem;
-    border: 0.1rem solid rgb(86, 186, 235,0.5);
+    border: 0.1rem solid rgb(86, 186, 235, 0.5);
 }
 
-.choice-container:hover{
+.choice-container:hover {
     transform: translateY(-0.2rem);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
-.choice-prefix{
+
+.choice-prefix {
     font-size: 1.5rem;
     font-weight: 700;
     color: #56a5eb;
     text-transform: uppercase;
 }
 
-.choice-text{
+.choice-text {
     font-size: 1.5rem;
     font-weight: 500;
     color: #fff;
@@ -31,24 +32,24 @@
 
 .correct {
     background-color: #28a745;
-  }
-  
-  .incorrect {
+}
+
+.incorrect {
     background-color: #dc3545;
-  }
+}
 
 /* HUD */
 /* Path: game.css */
-#hud{
+#hud {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 10%;
     width: 100%;
     padding: 0 1rem;
-    border: 0.1rem solid rgb(86, 186, 235,0.5);
 }
-.hud-prefix{
+
+.hud-prefix {
     font-size: 1.5rem;
     font-weight: 700;
     color: #56a5eb;
@@ -56,19 +57,42 @@
     text-align: center;
 }
 
-.hud-main-text{
-   text-align: center;
+.hud-main-text {
+    text-align: center;
 }
 
-#progressBar{
+#progressBar {
     width: 20rem;
     height: 4rem;
-    border: 0.3rem solid rgb(86, 186, 235,0.5);
+    border: 0.3rem solid rgb(86, 186, 235, 0.5);
     margin-top: 1rem;
 }
 
-#progressBarFull{
+#progressBarFull {
     height: 3.4rem;
     background-color: #56a5eb;
     width: 0%;
+}
+
+/*LOADER*/
+/* Path: game.css */
+#loader {
+    border: 1rem solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 1rem solid #56a5eb;
+    width: 10rem;
+    height: 10rem;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+
+    0% {
+        transform: rotate(0deg);
     }
+
+    100% {
+        transform: rotate(360deg);
+    }
+    
+}

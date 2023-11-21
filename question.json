@@ -1,0 +1,30 @@
+[
+    {
+      "question": "What is the best basketball player in the world??",
+      "choice1": "Lebron James",
+      "choice2": "Michael Jordan",
+      "choice3": "Kobe Bryant",
+      "choice4": "Stephen Curry",
+     "answer": 2
+      
+    },
+    {
+      "question":
+        "What is the most famous food in Italy?",
+      "choice1": "Croissant",
+      "choice2": "Pasta",
+      "choice3": "Lasagna",
+      "choice4": "Risotto",
+      "answer": 2
+      
+    },
+    {
+      "question": " What is the biggest country in Europe?",
+      "choice1": "Germany",
+      "choice2": "France",
+      "choice3": "Italy",
+      "choice4": "Russia",
+      "answer": 4
+      
+    }
+  ]
